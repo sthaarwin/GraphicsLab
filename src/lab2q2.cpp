@@ -80,7 +80,6 @@ void drawLineBresenham(int x1, int y1, int x2, int y2) {
     }
 }
 
-// Helper function to convert OpenGL coordinates to screen coordinates
 void drawLine(float x1, float y1, float x2, float y2) {
     // Convert OpenGL coords (-1 to 1) to screen pixels
     int X1 = (x1 + 1.0f) * 400;

@@ -13,10 +13,8 @@ void drawLineDDA(float x1, float y1, float x2, float y2) {
     float dx = x2 - x1;
     float dy = y2 - y1;
     
-    // Calculate the number of steps required for generating pixels
     int steps = abs(dx) > abs(dy) ? abs(dx) : abs(dy);
     
-    // Calculate increment in x & y for each step
     float xIncrement = dx / (float)steps;
     float yIncrement = dy / (float)steps;
     
@@ -31,9 +29,7 @@ void drawLineDDA(float x1, float y1, float x2, float y2) {
     }
 }
 
-// Helper function to convert OpenGL coordinates to screen coordinates
 void drawLine(float x1, float y1, float x2, float y2) {
-    // Convert OpenGL coords (-1 to 1) to screen pixels
     float X1 = (x1 + 1.0f) * 400;
     float Y1 = (y1 + 1.0f) * 300;
     float X2 = (x2 + 1.0f) * 400;

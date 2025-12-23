@@ -48,7 +48,6 @@ void drawCircleMidpoint(int xc, int yc, int radius) {
     }
 }
 
-// Helper function to convert OpenGL coordinates to screen coordinates
 void drawCircle(float xc, float yc, float r) {
     // Convert OpenGL coords (-1 to 1) to screen pixels
     int X = (xc + 1.0f) * 400;
@@ -84,10 +83,10 @@ int main() {
         glColor3f(1.0f, 1.0f, 1.0f);
         
         // Draw circles of different sizes to demonstrate the algorithm
-        drawCircle(0.0f, 0.0f, 0.6f);      // Large circle at center
-        drawCircle(-0.5f, 0.4f, 0.2f);     // Small circle top-left
-        drawCircle(0.5f, 0.4f, 0.2f);      // Small circle top-right
-        drawCircle(0.0f, -0.5f, 0.3f);     // Medium circle bottom
+        drawCircle(0.0f, 0.0f, 0.6f);     
+        drawCircle(-0.5f, 0.4f, 0.2f);   
+        drawCircle(0.5f, 0.4f, 0.2f);      
+        drawCircle(0.0f, -0.5f, 0.3f);   
 
         glfwSwapBuffers(window);
         glfwPollEvents();
