@@ -8,7 +8,7 @@ void plotPixel(float x, float y) {
     glEnd();
 }
 
-// Bresenham Line Drawing Algorithm for |m| < 1 (gentle slope)
+// Bresenham Line Drawing Algorithm for |m| < 1 
 void bresenhamLow(int x1, int y1, int x2, int y2) {
     int dx = x2 - x1;
     int dy = y2 - y1;
@@ -34,7 +34,7 @@ void bresenhamLow(int x1, int y1, int x2, int y2) {
     }
 }
 
-// Bresenham Line Drawing Algorithm for |m| >= 1 (steep slope)
+// Bresenham Line Drawing Algorithm for |m| >= 1 
 void bresenhamHigh(int x1, int y1, int x2, int y2) {
     int dx = x2 - x1;
     int dy = y2 - y1;
@@ -64,14 +64,14 @@ void bresenhamHigh(int x1, int y1, int x2, int y2) {
 void drawLineBresenham(int x1, int y1, int x2, int y2) {
     // Handle all octants by choosing the appropriate algorithm
     if (abs(y2 - y1) < abs(x2 - x1)) {
-        // Gentle slope: |m| < 1
+        // |m| < 1
         if (x1 > x2) {
             bresenhamLow(x2, y2, x1, y1);
         } else {
             bresenhamLow(x1, y1, x2, y2);
         }
     } else {
-        // Steep slope: |m| >= 1
+        // |m| >= 1
         if (y1 > y2) {
             bresenhamHigh(x2, y2, x1, y1);
         } else {
@@ -116,16 +116,15 @@ int main() {
 
         glColor3f(1.0f, 1.0f, 1.0f);
         
-        // Draw various lines to demonstrate Bresenham algorithm
-        // Lines with |m| < 1 (gentle slope)
-        drawLine(-0.8f, 0.5f, 0.8f, 0.5f);      // Horizontal line (m = 0)
-        drawLine(-0.8f, -0.3f, 0.8f, 0.3f);     // Gentle positive slope
-        drawLine(-0.8f, 0.3f, 0.8f, -0.3f);     // Gentle negative slope
+        // Lines with |m| < 1 
+        drawLine(-0.8f, 0.5f, 0.8f, 0.5f);     
+        drawLine(-0.8f, -0.3f, 0.8f, 0.3f);     
+        drawLine(-0.8f, 0.3f, 0.8f, -0.3f);   
         
-        // Lines with |m| >= 1 (steep slope)
-        drawLine(0.0f, -0.8f, 0.0f, 0.8f);      // Vertical line (m = infinity)
-        drawLine(-0.3f, -0.8f, 0.3f, 0.8f);     // Steep positive slope
-        drawLine(0.3f, -0.8f, -0.3f, 0.8f);     // Steep negative slope
+        // Lines with |m| >= 1 
+        drawLine(0.0f, -0.8f, 0.0f, 0.8f);     
+        drawLine(-0.3f, -0.8f, 0.3f, 0.8f);   
+        drawLine(0.3f, -0.8f, -0.3f, 0.8f);   
         
         // Diagonal line (m = 1, boundary case)
         drawLine(-0.6f, -0.6f, 0.6f, 0.6f);

@@ -67,20 +67,10 @@ int main() {
 
         glColor3f(1.0f, 1.0f, 1.0f);
         
-        // Draw various lines to demonstrate DDA algorithm
-        // Horizontal line
         drawLine(-0.8f, 0.5f, 0.8f, 0.5f);
-        
-        // Vertical line
         drawLine(0.0f, -0.8f, 0.0f, 0.8f);
-        
-        // Diagonal line (45 degrees)
         drawLine(-0.6f, -0.6f, 0.6f, 0.6f);
-        
-        // Line with different slope
         drawLine(-0.8f, -0.3f, 0.8f, 0.3f);
-        
-        // Steep line
         drawLine(-0.3f, -0.8f, 0.3f, 0.8f);
 
         glfwSwapBuffers(window);

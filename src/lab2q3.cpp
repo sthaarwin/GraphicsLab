@@ -26,10 +26,7 @@ void drawCircleMidpoint(int xc, int yc, int radius) {
     int x = 0;
     int y = radius;
     
-    // Initial decision parameter
     int d = 1 - radius;
-    
-    // Plot initial point
     plotCirclePoints(xc, yc, x, y);
     
     // Generate points for one octant

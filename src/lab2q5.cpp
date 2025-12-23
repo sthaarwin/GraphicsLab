@@ -190,7 +190,6 @@ void drawPieChart(int xc, int yc, int radius, const std::vector<PieSlice>& slice
         currentAngle = endAngle;
     }
     
-    // Draw outer circle for clean edge
     glColor3f(1.0f, 1.0f, 1.0f);
     glPointSize(1.0f);
     drawCircleMidpoint(xc, yc, radius);
@@ -248,7 +247,7 @@ int main() {
     
     glPointSize(2.0f);
     
-    // Sample data: Market share or budget distribution
+    // Sample data
     std::vector<PieSlice> pieData = {
         {35.0f, "Category A", 1.0f, 0.2f, 0.2f},   // Red
         {25.0f, "Category B", 0.2f, 0.8f, 0.2f},   // Green
