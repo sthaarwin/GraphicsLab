@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
-project(l4q3 LANGUAGES CXX)
+project(l3q2 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Project source
 set(PROJECT_SOURCES
-    ${PROJECT_SOURCE_DIR}/src/lab4q3.cpp
+    ${PROJECT_SOURCE_DIR}/src/lab3q7.cpp
 )
 
 # Add ImGui implementation/source files from the included imgui folder
